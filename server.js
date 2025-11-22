@@ -38,8 +38,9 @@ app.get('/todo', (req, res) => {
   res.json({ message: 'Hello from todo!', myMsg : envInfo , files : fs.readdirSync(cwd) });
 });
 
-
-app.listen(4000, () => {
-  console.log('localhost:4000 running on port 4000');
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
+
 
