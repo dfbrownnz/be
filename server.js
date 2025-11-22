@@ -31,7 +31,7 @@ app.get('/todo', (req, res) => {
   };
 
   // const cwd = path.join(process.cwd(), 'data');
-  const cwdLocal = process.cwd() + path.sep + 'data' + path.sep;
+  const cwdLocal = process.cwd() + path.sep + 'data' ;
 
   folderCheck(cwdLocal)
   const fileName = cwdLocal + path.sep + 'new_data.json';
